@@ -27,6 +27,9 @@ Ext.define('SWApp.view.tab.NavigationTabs', {
     },
 
     items: [{
+        title: 'Planety',
+        // glyph: 85
+    }, {
         title: 'Rasy',
         // glyph: 85
     }, {
@@ -42,6 +45,32 @@ Ext.define('SWApp.view.tab.NavigationTabs', {
         title: 'Filmy',
         // glyph: 42
     }],
+
+    listeners: {
+        render: function() {
+            this.items.each(function(panel){
+                // Added tabclick event for tabpanel
+                panel.tab.on('click', function(){
+                    var window = Ext.widget('window',{
+                        title: this.title,
+                        width: 500,
+                        height: 500,
+                        layout: 'fit',
+                        minWidth: 300,
+                        minHeight: 300,
+                        collapsible: true,
+                        maximizable: true,
+                        ghost: false,
+                        items: [{
+                            xtype: 'tab'
+                        }]
+                    });
+
+                    window.show();
+                });
+            });
+        }
+    },
 
     setCollapsed: function(collapsed) {
         this[collapsed ? 'collapse' : 'expand']();
