@@ -12,6 +12,9 @@ Ext.define('SWApp.view.main.Main', {
         'SWApp.view.main.MainModel'
     ],
 
+    style: 'background-color: #c3c8ce;',
+    html: '<img src="https://lumiere-a.akamaihd.net/v1/images/og-generic_02031d2b.png?region=0%2C0%2C1200%2C1200"  height=auto style="position: absolute; top: 0; left: 100px; height: 100%; width: 100%; overflow: hidden;" />',
+
     xtype: 'app-main',
     
     controller: 'main',
@@ -21,6 +24,7 @@ Ext.define('SWApp.view.main.Main', {
 
     items: [
         Ext.create('SWApp.SideNavTab'),
+
     ],
 
     layout: {

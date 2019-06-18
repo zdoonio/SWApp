@@ -18,9 +18,6 @@ Ext.define('SWApp.view.tab.NavigationTabs', {
     tabPosition: 'left',
     tabRotation: 0,
     tabBar: {
-        // layout: {
-        //     pack: 'center'
-        // },
         border: false
     },
 
@@ -30,23 +27,20 @@ Ext.define('SWApp.view.tab.NavigationTabs', {
     },
 
     items: [{
-        title: 'Home',
-        glyph: 72
-    }, {
         title: 'Rasy',
-        glyph: 85
+        // glyph: 85
     }, {
         title: 'Postaci',
-        glyph: 117
+        // glyph: 117
     }, {
         title: 'Statki',
-        glyph: 42
+        // glyph: 42
     }, {
         title: 'Pojazdy',
-        glyph: 42
+        // glyph: 42
     }, {
         title: 'Filmy',
-        glyph: 42
+        // glyph: 42
     }],
 
     setCollapsed: function(collapsed) {
